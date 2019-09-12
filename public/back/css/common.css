@@ -1,3 +1,18 @@
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:hover,
+a:link,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: #333;
+}
+
 /* 登录页面 */
 .panel {
   padding: 0;
@@ -10,4 +25,95 @@
   line-height: 40px;
 }
 
+/*主页公共模块*/
+
+/*1.主页侧边栏*/
+.lt-aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  background-color: #222D32;
+  z-index: 999;
+}
+.lt-aside .title {
+  height: 50px;
+  width: 100%;
+  background-color: #367FA9;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  line-height: 50px;
+}
+.lt-aside .user {
+  margin: 30px 0;
+}
+.lt-aside .user>img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+.lt-aside .user>p {
+  color: #fff;
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.lt-aside .nav a {
+  color: #fff;
+  width: 100%;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 40px;
+  border-left: 3px solid transparent;
+}
+.lt-aside .nav a span {
+  padding-left: 3px;
+}
+.lt-aside .nav .small a {
+  padding-left: 60px;
+}
+
+/* 2.主页顶部 */
+.lt-top {
+  padding-left: 180px;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #3C8DBC; 
+}
+.lt-top a {
+  color: #fff;
+  font-size: 20px;
+  padding: 13px 15px;
+}
+
+/* 3.主页主体部分 */
+body,html {
+  width: 100%;
+  height: 100%;
+}
+.lt-main {
+  padding-top: 50px;
+  padding-left: 180px;
+  width: 100%;
+  height: 100%;
+}
+.lt-main .nav {
+  padding: 20px 20px;
+}
+.lt-main .nav a {
+  color: #777777;
+}
+.lt-main .nav a.active {
+  color: #367FA9;
+}
 
