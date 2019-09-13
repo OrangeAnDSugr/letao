@@ -72,17 +72,20 @@ a:visited {
   height: 40px;
   line-height: 40px;
   padding-left: 40px;
-  border-left: 3px solid transparent;
+  border-left: 6px solid transparent;
 }
 .lt-aside .nav a span {
-  padding-left: 3px;
+  padding-left: 5px;
 }
 .lt-aside .nav .small a {
   padding-left: 60px;
 }
+.lt-aside .nav li a.current {
+  border-left-color: #367FA9;
+  background-color: #1D1F21;
+}
 .lt-aside.current {
   left: -177px;
-
 }
 /* 2.主页顶部 */
 .lt-top {
@@ -127,6 +130,11 @@ body,html {
 }
 .lt-main.current {
   padding-left: 0;
+}
+.lt-main .echarts2,
+.lt-main .echarts1 {
+  width: 45%;
+  height: 400px;
 }
 
 /* 模态框 */
