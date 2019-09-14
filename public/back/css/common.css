@@ -158,8 +158,11 @@ table.table.table-bordered img {
 #addModal  img {
   height: 100px;
   display: block;
+  width: 100px;
+
 }
-#addModal [name="brandName"] {
+#addModal .btn-group,
+#addModal .dropdown{
   width: 100%;
 }
 

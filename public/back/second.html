@@ -100,44 +100,45 @@
           <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
           <h4 class="modal-title">温馨提示</h4>
         </div>
-        <form>
+        <form id="addForm">
           <div class="modal-body">
 
             <div class="form-group">
               <div class="btn-group">
-                <label class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
-                  for="topCate">
-                  请选择一级分类 <span class="caret"></span>
-                </label>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li><a href="#">Separated link</a></li>
-                </ul>
-                <input type="text" id="topCate" name="categoryId">
-                <input type="text">
+                <div class="dropdown">
+                    <label class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                    for="topCate">
+                    请选择一级分类 <span class="caret"></span>
+                    
+                  </label>
+                  
+                  <ul class="dropdown-menu">
+                    <!-- 挖个坑 -->
+                  </ul>
+                </div>
+                <input type="hidden" id="topCate" name="categoryId">
+                <input type="hidden" value="1" name="hot">
               </div>
             </div>
             <div class="form-group">
-              <input type="text" name="brandName" placeholder="请输入二级分类">
+              <input type="text" name="brandName" class="form-control" placeholder="请输入二级分类">
             </div>
             <div class="form-group">
               <div class="btn-group">
-                <label class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
-                  for="topCate">
-                  选择文件
-                </label>
-                <img src="./images/none.png" alt="">
-                <input type="text" id="topCate" name="brandLogo">
+                <label class="btn btn-default btn-sm" for="brandLogo">选择文件</label>
+                <input  type="file" name="pic1" id="brandLogo" data-url="/category/addSecondCategoryPic" 
+                  style="display: none">
               </div>
             </div>
-
+            <div class="form-group">
+                <img src="./images/none.png" alt="" id="brandImg">
+                <input type="hidden" name="brandLogo">
+            </div>
 
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-            <button type="button" class="btn btn-primary" id="addCate">添加</button>
+            <button type="submit" class="btn btn-primary" id="addCate">添加</button>
           </div>
         </form>
       </div>
@@ -150,9 +151,11 @@
   <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
   <script src="./lib/nprogress/nprogress.js"></script>
   <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+  <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
   <script src="./js/common.js"></script>
   <script src="./js/second.js"></script>
-
+  <!-- 表格模板 -->
   <script type="text/html" id="tpl">
     {{ each rows v i }}
       <tr>
@@ -161,6 +164,12 @@
           <td>{{ v.brandName }}</td>
           <td><img src="{{ v.brandLogo }}" alt=""></td>
       </tr>
+    {{ /each }}
+  </script>
+  <!-- 一级分类下拉菜单 -->
+  <script type="text/html" id="firstTpl"> 
+    {{ each rows v i }}
+    <li data-id='{{ v.id }}'><a href="#" >{{ v.categoryName }}</a></li>
     {{ /each }}
   </script>
 </body>

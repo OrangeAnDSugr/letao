@@ -60,9 +60,6 @@ $(function () {
   // 注册点击添加事件 阻止默认的表单提交 发送ajax请求 刷新页面 重置表单元素
   $("#addForm").on("success.form.bv",function ( e ) {
     e.preventDefault();
-    
-  })
-  $("#addCate").on('click',function () {
     $.ajax({
       type: 'post',
       url: '/category/addTopCategory',
@@ -81,4 +78,5 @@ $(function () {
       }
     })
   })
+
 })
