@@ -42,16 +42,34 @@
   </div>
   <!-- 主页主体部分 -->
   <div class="lt-main">
-    <div class="nav">
-      <ol class="breadcrumb">
-        <li><a href="index.html" class="active">管理首页</a></li>
-        <li><a href="index.html">分类管理</a></li>
-        <li><a href="index.html">一级分类</a></li>
-      </ol>
+    <div class="container-fluid">
+      <!-- 面包屑导航 -->
+      <div class="nav">
+        <ol class="breadcrumb">
+          <li><a href="index.html" class="active">管理首页</a></li>
+          <li><a href="first.html">分类管理</a></li>
+          <li><a href="first.html">一级分类</a></li>
+        </ol>
+      </div>
+      <button class="btn btn-default" id="add">添加分类</button>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th width="20%">序号</th>
+            <th width="80%">一级分类名</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 挖个坑 -->
+        </tbody>
+      </table>
+      <div class="text-right">
+        <ul id="pages"></ul>
+      </div>
+
     </div>
   </div>
   <!-- 退出模态框 -->
-
   <div class="modal fade" tabindex="-1" id="outModal">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -60,7 +78,7 @@
           <h4 class="modal-title">温馨提示</h4>
         </div>
         <div class="modal-body">
-          
+
           <p><i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？</p>
         </div>
         <div class="modal-footer">
@@ -70,12 +88,49 @@
       </div>
     </div>
   </div>
+  <!-- 添加分类 -->
+  <div class="modal fade" tabindex="-1" id="addModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          <h4 class="modal-title">添加分类</h4>
+        </div>
+        <form id="addForm">
+        <div class="modal-body">
+            <div class="form-group">
+              <input type="text" name="categoryName" class="form-control" id="" placeholder="请输入一级分类">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="submit" class="btn btn-primary" id="addCate">添加</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+
 
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+  <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
   <script src="./lib/nprogress/nprogress.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
   <script src="./js/common.js"></script>
+  <script src="./js/first.js"></script>
+
+
+  <!-- 一级分类表格模板 -->
+  <script type="text/html" id="tpl">
+    {{ each rows v i }}
+    <tr>
+      <td>{{ i + 1 + ( page - 1 ) * size }}</td>
+      <td>{{ v.categoryName }}</td>
+    </tr>
+    {{ /each }}
+  </script>
 </body>
 
 </html>

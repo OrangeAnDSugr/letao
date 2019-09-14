@@ -120,7 +120,7 @@ body,html {
   transition: all .5s;
 }
 .lt-main .nav {
-  padding: 20px 0px;
+  padding-top: 20px;
 }
 .lt-main .nav a {
   color: #777777;
@@ -135,6 +135,9 @@ body,html {
 .lt-main .echarts1 {
   width: 45%;
   height: 400px;
+}
+#add {
+  margin-bottom: 20px;
 }
 
 /* 模态框 */
