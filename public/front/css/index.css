@@ -1,0 +1,43 @@
+/* 乐淘商城主体部分 */
+.lt-main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* 商城主体导航样式 */
+.lt-main .nav {
+  padding: 10px;
+}
+.lt-main .nav li{
+  float: left;
+  width: 33.3%;
+  list-style: none;
+}
+
+/* 商城主体商品区样式  */
+.lt-main .product {
+  padding: 10px;
+ 
+  width: 100%;
+}
+.pro-item {
+  width: 48%;
+  text-align: center;
+  float: left;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.pro-item img {
+  width: 150px;
+  height: 150px;
+}
+.pro-item:nth-child( 2n+1 ) {
+  margin-right: 4%;
+}
+.pro-item .price {
+  color: red;
+ }
+ .pro-item .oldPrice {
+   text-decoration: line-through;
+ }
