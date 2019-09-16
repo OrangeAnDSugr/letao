@@ -157,9 +157,8 @@ table.table.table-bordered img {
 /* 添加分类模态框 */
 #addModal  img {
   height: 100px;
-  display: block;
+  display: inline-block;
   width: 100px;
-
 }
 #addModal .btn-group,
 #addModal .dropdown{
