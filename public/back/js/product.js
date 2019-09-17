@@ -178,7 +178,7 @@ $(function () {
       size: {
         validators: {
           notEmpty: {
-            message: '商品名称不能为空'
+            message: '商品尺码不能为空'
           },
           regexp: {
             regexp: /^\d{2}-\d{2}$/,
@@ -190,7 +190,7 @@ $(function () {
       oldPrice: {
         validators: {
           notEmpty: {
-            message: '商品名称不能为空'
+            message: '商品原价不能为空'
           }
         }
       },
@@ -198,15 +198,15 @@ $(function () {
       price: {
         validators: {
           notEmpty: {
-            message: '商品名称不能为空'
+            message: '商品现价不能为空'
           }
         }
       },
-      // 商品名称
+      // 图片上传
       pic2: {
         validators: {
           notEmpty: {
-            message: '商品名称不能为空'
+            message: '请选择三张图片'
           }
         }
       },
@@ -215,13 +215,12 @@ $(function () {
 
   // 阻止默认的表单提交 通过ajax发送请求
   $("#addForm").on("success.form.bv",function ( e ) {
-    console.log(1);
     
     e.preventDefault();
-    console.log(imgArr);
+    // console.log(imgArr);
     
     var addFormData = $("#addForm").serialize();
-    console.log(addFormData);
+    // console.log(addFormData);
     
     addFormData += "&picName1="+ imgArr[0].picName +"&picAddr1="+ imgArr[0].picAddr;
     addFormData += "&picName2="+ imgArr[1].picName +"&picAddr2="+ imgArr[1].picAddr;

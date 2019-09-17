@@ -6,6 +6,12 @@ html,body {
   margin: 0;
   padding: 0;
 }
+
+.lt-main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 img {
   width: 100%;
   display: block;
@@ -70,6 +76,7 @@ img {
   height: 55px;
   width: 100%;
   overflow: hidden;
+  z-index: 999;
 }
 
 .lt-footer li {
@@ -78,6 +85,7 @@ img {
   list-style: none;
   text-align: center;
   padding-top: 10px;
+  
 }
 .lt-footer li.current p,
 .lt-footer li.current i {
@@ -87,5 +95,6 @@ img {
 .lt-footer li p {
   color: #fff;
 }
+
 
 

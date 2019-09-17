@@ -1,9 +1,4 @@
-/* 乐淘商城主体部分 */
-.lt-main {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
+
 /* 商城主体导航样式 */
 .lt-main .nav {
   padding: 10px;
