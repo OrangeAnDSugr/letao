@@ -15,13 +15,21 @@ $(function () {
   });
 
 
-  function getHistory() {
-    // var arr = ['耐克','阿迪','新百伦','特步','以纯'];
-    // localStorage.setItem( 'search_List' , JSON.stringify( arr ) );
-
-    var str = localStorage.getItem( 'search_List' );
-    console.log(JSON.parse(str));
-    var arr = JSON.parse(str);
-    
-  }
+  
 });
+
+function getLocationKey( key ) {
+  // var arr = ['耐克','阿迪','新百伦','特步','以纯'];
+  // localStorage.setItem( 'search_List' , JSON.stringify( arr ) );
+  var str = location.search;
+  str = decodeURI(str);
+  str = str.slice( 1 );
+  var hisArr = str.split( '&' );
+  var obj = {};
+  hisArr.forEach(function ( v , i ) {
+    var arr = v.split('=');
+    obj[ arr[0] ] = arr[1];
+  })
+  return obj[ key ]; 
+  
+}

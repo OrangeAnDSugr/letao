@@ -1,0 +1,51 @@
+/* 排序模块样式 */
+.lt-main .sort {
+  height: 30px;
+  width: 100%;
+}
+.lt-main .sort a {
+  width: 25%;
+  height: 30px;
+  display: block;
+  float: left;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  color: #666;
+}
+
+.lt-main .sort a.current {
+  color: orange;
+}
+
+.search .search-input {
+  margin-bottom: 0;
+}
+
+
+/* 加载动画样式 */
+.product {
+  position: relative;
+}
+
+.loading {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: loading 1s infinite;
+  border: 3px solid #069;
+}
+
+
+@keyframes loading {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+
+  }
+}

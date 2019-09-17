@@ -21,7 +21,7 @@
     <div class="lt-header">
       <!-- history.go(-1) -->
       <a href="javascript:history.back();" class="icon-left"><i class="mui-icon mui-icon-back"></i></a>
-      <div class="text"><span>搜索中心</span></div>
+      <div class="text"><span>商品列表</span></div>
     </div>
     <!-- 商城主体 -->
     <div class="lt-main">
@@ -32,8 +32,18 @@
             <input type="text" class="search-input" placeholder="请输入搜索关键字">
             <button class="search-btn">搜索</button>
           </div>
-         
-
+          <!-- 搜索排序 -->
+          <div class="sort">
+            <a  href="#">上架时间<i class="fa fa-angle-down"></i></a>
+            <a data-type="price" href="#">价格<i class="fa fa-angle-down"></i></a>
+            <a data-type="num" href="#">库存<i class="fa fa-angle-down"></i></a>
+            <a  href="#">折扣<i class="fa fa-angle-down"></i></a>
+          </div>
+          <!-- 商品模块 -->
+          <div class="product mui-clearfix">
+            <!-- 挖个坑 -->
+            <div class="loading"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -69,6 +79,21 @@
 
   </div>
 
+  <!-- 商品区模板 -->
+  <script type="text/html" id="proTpl">
+
+    {{ each data v i }}
+    <div class="pro-item">
+        <a href="#"><img src="{{ v.pic[0].picAddr }}" alt=""></a>
+        <p class="info mui-ellipsis-2">{{ v.proName }}</p>
+        <p>
+          <span class="price">{{ v.price }}</span>
+          <span class="oldPrice"> {{ v.oldPrice }} </span>
+        </p>
+        <button class="mui-btn mui-btn-primary">立即购买</button>
+    </div>
+    {{ /each }}
+  </script>
 
 
 
