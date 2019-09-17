@@ -1,0 +1,40 @@
+/* 搜索中心主体 头部 */
+.history .title {
+  height: 30px;
+  width: 100%;
+  line-height: 30px;
+}
+.history .title a {
+  color: #666;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+/* 搜索中心主体 搜索记录 */
+.history .main {
+  padding: 0 10px
+}
+.history .main li {
+  float: left;
+  background-color: #ddd;
+  padding: 0 5px;
+  border-radius: 10px;
+  height: 30px;
+  line-height: 30px;
+  margin: 5px;
+  list-style: none;
+  margin-right: none;
+}
+.history .main li a {
+  color: #666;
+  font-size: 16px;
+}
+.history .main li i {
+  height: 30px;
+}
+.history .main .mui-icon {
+  line-height: 30px;
+}
+.history p {
+  padding-left: 20px;
+}

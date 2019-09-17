@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>乐淘商城</title>
+  <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/search.css">
+  <link rel="icon" href="./favicon.ico">
+</head>
+
+<body>
+  <!--  -->
+  <!-- 全局容器 -->
+  <div class="lt-container">
+    <!-- 商城头部 -->
+    <div class="lt-header">
+      <!-- history.go(-1) -->
+      <a href="javascript:history.back();" class="icon-left"><i class="mui-icon mui-icon-back"></i></a>
+      <div class="text"><span>搜索中心</span></div>
+    </div>
+    <!-- 商城主体 -->
+    <div class="lt-main">
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <!-- 搜索框 -->
+          <div class="search">
+            <input type="text" class="search-input" placeholder="请输入搜索关键字">
+            <button class="search-btn">搜索</button>
+          </div>
+          <!-- 搜索历史 -->
+          <div class="history">
+            <!-- 搜索历史头部 -->
+            <!-- 挖个坑 -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- 商城底部 -->
+    <div class="lt-footer">
+      <ul class="mui-clearfix">
+        <li>
+          <a href="index.html">
+            <i class="fa fa-home"></i>
+            <p>首页</p>
+          </a>
+        </li>
+        <li>
+          <a href="category.html">
+            <i class="fa fa-bars"></i>
+            <p>分类页</p>
+          </a>
+        </li>
+        <li>
+          <a href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <p>购物车</p>
+          </a>
+        </li>
+        <li>
+          <a href="user.html">
+            <i class="fa fa-user"></i>
+            <p>用户中心</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- 搜索历史记录模板 -->
+  <script type="text/html" id="historyTpl">
+    <div class="title">
+        <a href="#">搜索历史</a>
+        <a href="#" class="mui-pull-right clearHistory"><i class="fa fa-trash"></i>清空记录</a>
+      </div>
+      <!-- 搜索历史主体 -->
+      <div class="main">
+        <!-- 挖个坑 -->
+        <ul class="mui-clearfix">
+            {{ each arr v i }}
+            
+                <li>
+                  <a href="#" class>{{ v }}</a>
+                  <i class="mui-icon mui-icon-closeempty" data-index="{{ i }}"></i>
+                </li>
+              
+            {{ /each }}
+          </ul>
+      </div>
+    
+  </script>
+
+  <script src="./lib/mui/js/mui.js"></script>
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/search.js"></script>
+</body>
+
+</html>
