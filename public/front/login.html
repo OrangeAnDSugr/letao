@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>乐淘商城</title>
+  <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/common.css">
+
+  <link rel="icon" href="./favicon.ico">
+</head>
+
+<body><!--  -->
+  <!-- 全局容器 -->
+  <div class="lt-container">
+    <!-- 商城头部 -->
+    <div class="lt-header">
+      <a href="javascript:history.back();" class="icon-left"><i class="mui-icon mui-icon-back"></i></a>
+      <div class="text"><span>登录</span></div>
+    </div>
+    <!-- 商城主体 -->
+    <div class="lt-main">
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>用户名</label>
+            <input type="text" class="mui-input-clear" placeholder="请输入用户名" id="username">
+            </div>
+            <div class="mui-input-row">
+                <label>密码</label>
+                <input type="password" class="mui-input-password" placeholder="请输入密码" id="password">
+            </div>
+            <div class="mui-button-row">
+                <button type="button" class="mui-btn mui-btn-primary btn-login" >登录</button>
+                <button type="reset" class="mui-btn mui-btn-danger" >重置</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    </div>
+    <!-- 商城底部 -->
+    <div class="lt-footer">
+      <ul class="mui-clearfix">
+        <li>
+          <a href="index.html">
+            <i class="fa fa-home"></i>
+            <p>首页</p>
+          </a>
+        </li>
+        <li>
+          <a href="category.html">
+            <i class="fa fa-bars"></i>
+            <p>分类页</p>
+          </a>
+        </li>
+        <li>
+          <a href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <p>购物车</p>
+          </a>
+        </li>
+        <li  class="current">
+          <a href="user.html" >
+            <i class="fa fa-user"></i>
+            <p>用户中心</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+
+
+  <script src="./lib/mui/js/mui.js"></script>
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/login.js"></script>
+</body>
+
+</html>
